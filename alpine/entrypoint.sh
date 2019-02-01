@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo \
 	mstream \
@@ -8,7 +8,7 @@ echo \
 	${USER:+'--user' $USER} \
 	${PASSWORD:+'--password' $PASSWORD}
 
-mstream \
+./cli-boot-wrapper.js \
 	--port $PORT \
 	--musicdir $MUSIC_DIR \
 	${NO_UPLOAD:+'--noupload'} \
